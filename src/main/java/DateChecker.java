@@ -1,3 +1,6 @@
+import java.util.EnumSet;
+import java.util.Set;
+
 public class DateChecker
 {
     public enum Month 
@@ -16,8 +19,12 @@ public class DateChecker
         DECEMBER
     }
 
+    private static final Set<Month> THIRTY_ONE_DAY_MONTHS = EnumSet.of(
+            Month.JANUARY, Month.MARCH, Month.MAY, Month.JULY,
+            Month.AUGUST, Month.OCTOBER, Month.DECEMBER);
+
     public boolean has31Days(Month month) 
     {
-        return month == Month.JANUARY || month == Month.MARCH;
+        return THIRTY_ONE_DAY_MONTHS.contains(month);
     }
 }
