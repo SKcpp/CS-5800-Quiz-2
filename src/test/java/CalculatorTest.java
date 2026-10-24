@@ -20,4 +20,12 @@ class CalculatorTest
         int actual = calc.sum(2, -3);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSubtract() 
+    {
+        int expected = 2;
+        int actual = calc.subtract(5, 3);
+        assertEquals(expected, actual);
+    }
 }
