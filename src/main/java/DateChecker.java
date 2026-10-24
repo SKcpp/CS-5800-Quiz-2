@@ -16,7 +16,8 @@ public class DateChecker
         DECEMBER
     }
 
-    public boolean has31Days(Month month) {
-        return false;
+    public boolean has31Days(Month month) 
+    {
+        return month == Month.JANUARY;
     }
 }

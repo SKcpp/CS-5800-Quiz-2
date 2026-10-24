@@ -12,4 +12,12 @@ class CalculatorTest
         int actual = calc.sum(2, 3);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSumWithNegative() 
+    {
+        int expected = -1;
+        int actual = calc.sum(2, -3);
+        assertEquals(expected, actual);
+    }
 }
